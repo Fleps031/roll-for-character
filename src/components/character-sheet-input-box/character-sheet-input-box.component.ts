@@ -17,10 +17,34 @@ export class CharacterSheetInputBoxComponent implements OnInit {
   @Input() inputBoxHeight!: string;
   @Input() inputBoxInnerTitle!: string;
   @Input() inputBoxType!: string;
+  @Input() inputBoxTextAlign!: string;
+  @Input() inputBoxId!: string;
+  @Input() maxInputLength!: number;
 
-  constructor() { }
+  validKeyValues!: string[]
+
+  constructor() {
+    this.validKeyValues = [
+      'Backspace',
+      'Delete',
+      'ArrowLeft',
+      'ArrowRight',
+    ];
+  }
 
   ngOnInit() {
+  }
+
+  enforceMinMax(event: KeyboardEvent): void{
+    const currentInput = (document.querySelector('#'+ this.inputBoxId) as HTMLInputElement)
+    const currentInputValue = currentInput?.value
+
+    if(!this.validKeyValues.includes(event.key)){
+      if(currentInputValue.length >= this.maxInputLength){
+        event.preventDefault();
+      }
+    }
+
   }
 
 }

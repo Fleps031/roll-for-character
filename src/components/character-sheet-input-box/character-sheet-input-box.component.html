@@ -1,31 +1,35 @@
 
 <ng-container *ngIf="inputBoxInnerTitle">
-  <div 
-  [style.width]="inputBoxWidth" 
+  <div
+  [style.width]="inputBoxWidth"
   [style.height]="inputBoxHeight"
   id = 'character-sheet-input-box-with-inner-title'
   >
-    
+
     <h3 id = 'input-box-inner-title'>
       {{ inputBoxInnerTitle }}
     </h3>
-  
-    <input 
-    id='input-with-inner-title'
+
+    <input
+    class='input-with-inner-title'
     [style.type]="inputBoxType"
+    (keydown)="enforceMinMax($event)"
     >
   </div>
 </ng-container>
 
 <ng-container *ngIf="!inputBoxInnerTitle">
-  <div 
-  [style.width]="inputBoxWidth" 
+  <div
+  [style.width]="inputBoxWidth"
   [style.height]="inputBoxHeight"
-  id = 'character-sheet-input-box'
+  class = 'character-sheet-input-box'
   >
-    <input 
-    id='input-regular'
+    <input
+    class='input-regular'
+    [id]="inputBoxId"
     [style.type]="inputBoxType"
+    [style.text-align]="inputBoxTextAlign"
+    (keydown)="enforceMinMax($event)"
     >
   </div>
 </ng-container>

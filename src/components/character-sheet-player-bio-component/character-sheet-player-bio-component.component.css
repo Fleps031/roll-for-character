@@ -1,11 +1,14 @@
 #character-sheet-player-bio{
     display: flex;
     flex-direction: column;
+    grid-gap: 12px
 }
 
 #character-sheet-player-bio-lvl-and-xp{
     display: flex;
     flex-direction: row;
+    height: fit-content;
+    align-items: center;
     width: 80%;
     grid-gap: 24px;
 }
@@ -13,5 +16,38 @@
 #character-sheet-bio-xp-div{
     display: flex;
     flex-direction: row;
-    grid-gap: 2px;
+    align-items: center;
+    height: fit-content;
+    grid-gap: 8px;
+}
+
+p{
+  color: rgba(87, 129, 131, 1);
+  height: fit-content;
+  margin: 0;
+  font-size: 48px;
+}
+
+
+img{
+  width: 200px;
+  height: 200px;
+}
+
+#character-sheet-player-bio-basic{
+  display: flex;
+  flex-direction: column;
+  grid-gap: 24px;
+}
+
+.character-sheet-bio-info-input-box{
+  display: flex;
+  flex-direction: column;
+  grid-gap: 12px;
+}
+
+.character-sheet-bio-info-input-box h1{
+  font-size: 32px;
+  color: rgba(87, 129, 131, 1);
+  margin: 0;
 }
