@@ -1,0 +1,17 @@
+#character-sheet-player-bio{
+    display: flex;
+    flex-direction: column;
+}
+
+#character-sheet-player-bio-lvl-and-xp{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    grid-gap: 24px;
+}
+
+#character-sheet-bio-xp-div{
+    display: flex;
+    flex-direction: row;
+    grid-gap: 2px;
+}

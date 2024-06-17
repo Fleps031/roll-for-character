@@ -1,0 +1,13 @@
+#character-sheet-container{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 24px;
+    width: 100%;
+    height: 800px;
+}
+
+#character-sheet-bio-separator{
+    display: flex;
+    flex-direction: row;
+}
+

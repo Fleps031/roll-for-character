@@ -1,0 +1,41 @@
+#character-sheet-title-box{
+    display: flex;
+    flex-direction: row;
+    
+    width: 90vw;
+    height: 128px;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(3, 24, 26, 1);
+}
+
+h1{
+    font-weight: 400;
+    font-size: 42px;
+
+}
+
+
+#title-box{
+    display: flex;
+    width: 60%;
+    height: fit-content;
+    
+    color: white;
+    justify-content: end;
+}
+
+#title-box-flair{
+    display: flex;
+    width: 40%;
+    height: 128px;
+    padding-top: 75px;
+    justify-content: end;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}

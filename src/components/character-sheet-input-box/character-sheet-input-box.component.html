@@ -1,0 +1,31 @@
+
+<ng-container *ngIf="inputBoxInnerTitle">
+  <div 
+  [style.width]="inputBoxWidth" 
+  [style.height]="inputBoxHeight"
+  id = 'character-sheet-input-box-with-inner-title'
+  >
+    
+    <h3 id = 'input-box-inner-title'>
+      {{ inputBoxInnerTitle }}
+    </h3>
+  
+    <input 
+    id='input-with-inner-title'
+    [style.type]="inputBoxType"
+    >
+  </div>
+</ng-container>
+
+<ng-container *ngIf="!inputBoxInnerTitle">
+  <div 
+  [style.width]="inputBoxWidth" 
+  [style.height]="inputBoxHeight"
+  id = 'character-sheet-input-box'
+  >
+    <input 
+    id='input-regular'
+    [style.type]="inputBoxType"
+    >
+  </div>
+</ng-container>
