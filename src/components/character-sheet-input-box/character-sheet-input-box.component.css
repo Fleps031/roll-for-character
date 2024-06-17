@@ -10,6 +10,7 @@
     justify-content: start;
     align-items: center;
     grid-gap: 8px;
+    padding-right: 10px;
     padding-left: 8px;
     padding-top: 4px;
     padding-bottom: 4px;
@@ -24,7 +25,7 @@
     color: rgba(87, 129, 131, 1);
 }
 
-#input-with-inner-title{
+.input-with-inner-title{
     background-color: transparent;
     width: fit-content;
     max-width: 65%;
@@ -41,21 +42,22 @@
 
 /* without input title*/
 
-#character-sheet-input-box{
+.character-sheet-input-box{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    padding: 4px;
+    padding-left: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     background-color: rgba(3, 24, 25, 1);
 }
 
-#input-regular{
+.input-regular{
     background-color: transparent;
-    width: 80%;
+    width: 92%;
 
-    height: 80%;
-    text-align: center;
+    height: 90%;
 
     font-size: 32px;
     color: white;

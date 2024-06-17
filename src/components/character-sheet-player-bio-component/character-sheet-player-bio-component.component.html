@@ -5,25 +5,51 @@
       [inputBoxHeight]="'42px'"
       [inputBoxInnerTitle]="'LV'"
       [inputBoxType]="'number'"
+      [inputBoxId]="'bioInputCurrentLv'"
+      [maxInputLength]="3"
     >
     </app-character-sheet-input-box>
 
     <div id = 'character-sheet-bio-xp-div'>
       <app-character-sheet-input-box
-      [inputBoxWidth]="'156px'"
-      [inputBoxHeight]="'42px'" 
+      [inputBoxWidth]="'160px'"
+      [inputBoxHeight]="'42px'"
       [inputBoxInnerTitle]="'XP'"
       [inputBoxType]="'number'"
+      [inputBoxId]="'bioInputCurrentXp'"
+      [maxInputLength]="6"
       >
       </app-character-sheet-input-box>
       <p>/</p>
       <app-character-sheet-input-box
       [inputBoxWidth]="'116px'"
-      [inputBoxHeight]="'42px'" 
+      [inputBoxHeight]="'42px'"
       [inputBoxType]="'number'"
+      [inputBoxTextAlign]="'center'"
+      [inputBoxId]="'bioInputMaxXp'"
+      [maxInputLength]="6"
       >
       </app-character-sheet-input-box>
-    
+
     </div>
+  </div>
+  <div id = 'character-sheet-player-bio-basic'>
+    <img src = '../../assets/imgs/dragonborn.jpg'>
+
+    <div class = 'character-sheet-bio-info-input-box'>
+      <h1>
+        Name
+      </h1>
+        <app-character-sheet-input-box
+        [inputBoxWidth]="'440px'"
+        [inputBoxHeight]="'42px'"
+        [inputBoxType]="'text'"
+        [inputBoxTextAlign]="'start'"
+        [inputBoxId]="'bioInputName'"
+        [maxInputLength]="96"
+        >
+        </app-character-sheet-input-box>
+    </div>
+
   </div>
 </div>
