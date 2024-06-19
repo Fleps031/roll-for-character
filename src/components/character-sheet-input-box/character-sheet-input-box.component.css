@@ -4,7 +4,7 @@
 
 /* with input title*/
 
-#character-sheet-input-box-with-inner-title{
+.character-sheet-input-box-with-inner-title{
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -17,7 +17,7 @@
     background-color: rgba(3, 24, 25, 1);
 }
 
-#input-box-inner-title{
+.input-box-inner-title{
     font-weight: 400;
     font-size: 32px;
     width: 30%;
@@ -57,7 +57,7 @@
     background-color: transparent;
     width: 92%;
 
-    height: 90%;
+    height: 100%;
 
     font-size: 32px;
     color: white;

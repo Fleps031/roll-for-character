@@ -20,8 +20,11 @@ export class CharacterSheetInputBoxComponent implements OnInit {
   @Input() inputBoxTextAlign!: string;
   @Input() inputBoxId!: string;
   @Input() maxInputLength!: number;
+  @Input() inputBoxInputWidth!: string;
 
-  validKeyValues!: string[]
+  validKeyValues!: string[];
+  isInputTextSelected!: boolean;
+  charCount = 0;
 
   constructor() {
     this.validKeyValues = [
@@ -29,21 +32,41 @@ export class CharacterSheetInputBoxComponent implements OnInit {
       'Delete',
       'ArrowLeft',
       'ArrowRight',
+      'Tab',
     ];
+
+
   }
 
   ngOnInit() {
+    console.log(this.inputBoxId+this.inputBoxWidth)
   }
 
+  checkTextSelection(): void{
+   if(window.getSelection()?.toString() != ""){
+    this.isInputTextSelected = true;
+   }
+
+
+  }
   enforceMinMax(event: KeyboardEvent): void{
     const currentInput = (document.querySelector('#'+ this.inputBoxId) as HTMLInputElement)
     const currentInputValue = currentInput?.value
 
-    if(!this.validKeyValues.includes(event.key)){
+    this.checkTextSelection();
+
+    if(!this.validKeyValues.includes(event.key) && !this.isInputTextSelected && !event.ctrlKey){
+
       if(currentInputValue.length >= this.maxInputLength){
         event.preventDefault();
       }
+      else{
+        this.charCount++
+        console.log(this.charCount)
+      }
     }
+
+    this.isInputTextSelected = false;
 
   }
 

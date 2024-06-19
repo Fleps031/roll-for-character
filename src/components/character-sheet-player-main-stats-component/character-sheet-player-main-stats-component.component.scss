@@ -1,0 +1,16 @@
+.stats-grid{
+  width: 600px;
+  display: grid;
+  grid-column-gap: 24px ;
+  grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 150px;
+  height: 120px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}

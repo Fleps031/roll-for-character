@@ -1,0 +1,29 @@
+.stat-card{
+  width: 200px;
+  height: 300px;
+  border: 4px solid black ;
+  border-radius: 4px;
+  align-items: center;
+}
+
+.stat-card-outliner{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 90%;
+  border: 4px solid   rgb(255, 0, 0) ;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat-card-bonus{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+}
+
+.stat-card-stat-input{
+  position: relative;
+}
