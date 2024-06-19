@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-character-sheet-title-box-component',
   templateUrl: './character-sheet-title-box-component.component.html',
   standalone: true,
-  styleUrls: ['./character-sheet-title-box-component.component.css']
+  styleUrls: ['./character-sheet-title-box-component.component.css'],
 })
 export class CharacterSheetTitleBoxComponentComponent implements OnInit {
 

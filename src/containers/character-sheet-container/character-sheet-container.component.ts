@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CharacterSheetTitleBoxComponentComponent } from '../../components/character-sheet-title-box-component/character-sheet-title-box-component.component';
 import { CharacterSheetPlayerBioComponentComponent } from '../../components/character-sheet-player-bio-component/character-sheet-player-bio-component.component';
+import { CharacterSheetPlayerMainStatsComponentComponent } from '../../components/character-sheet-player-main-stats-component/character-sheet-player-main-stats-component.component';
 
 @Component({
   selector: 'app-character-sheet-container',
@@ -10,6 +11,7 @@ import { CharacterSheetPlayerBioComponentComponent } from '../../components/char
   imports: [
     CharacterSheetTitleBoxComponentComponent,
     CharacterSheetPlayerBioComponentComponent,
+    CharacterSheetPlayerMainStatsComponentComponent,
   ]
 })
 export class CharacterSheetContainerComponent implements OnInit {

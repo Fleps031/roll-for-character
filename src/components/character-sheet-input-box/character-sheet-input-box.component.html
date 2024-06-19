@@ -3,16 +3,20 @@
   <div
   [style.width]="inputBoxWidth"
   [style.height]="inputBoxHeight"
-  id = 'character-sheet-input-box-with-inner-title'
+  class = 'character-sheet-input-box-with-inner-title'
   >
 
-    <h3 id = 'input-box-inner-title'>
+    <h3 class = 'input-box-inner-title'>
       {{ inputBoxInnerTitle }}
     </h3>
 
     <input
     class='input-with-inner-title'
+    [id]="inputBoxId"
     [style.type]="inputBoxType"
+    (mouseleave)="checkTextSelection()  "
+    (mousedown)="checkTextSelection()"
+    (mouseup)="checkTextSelection()"
     (keydown)="enforceMinMax($event)"
     >
   </div>
@@ -28,7 +32,11 @@
     class='input-regular'
     [id]="inputBoxId"
     [style.type]="inputBoxType"
+    [style.width]="inputBoxInputWidth"
     [style.text-align]="inputBoxTextAlign"
+    (mouseleave)="checkTextSelection()  "
+    (mousedown)="checkTextSelection()"
+    (mouseup)="checkTextSelection()"
     (keydown)="enforceMinMax($event)"
     >
   </div>

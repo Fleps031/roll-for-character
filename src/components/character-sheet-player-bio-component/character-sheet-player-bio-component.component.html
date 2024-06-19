@@ -6,7 +6,7 @@
       [inputBoxInnerTitle]="'LV'"
       [inputBoxType]="'number'"
       [inputBoxId]="'bioInputCurrentLv'"
-      [maxInputLength]="3"
+      [maxInputLength]="2"
     >
     </app-character-sheet-input-box>
 
@@ -46,9 +46,52 @@
         [inputBoxType]="'text'"
         [inputBoxTextAlign]="'start'"
         [inputBoxId]="'bioInputName'"
-        [maxInputLength]="96"
+        [inputBoxInputWidth]="'90%'"
+        [maxInputLength]="27"
         >
         </app-character-sheet-input-box>
+
+        <h1>
+          Class
+        </h1>
+          <app-character-sheet-input-box
+          [inputBoxWidth]="'440px'"
+          [inputBoxHeight]="'42px'"
+          [inputBoxType]="'text'"
+          [inputBoxTextAlign]="'start'"
+          [inputBoxId]="'bioInputClass'"
+          [inputBoxInputWidth]="'90%'"
+          [maxInputLength]="27"
+          >
+          </app-character-sheet-input-box>
+
+          <h1>
+            Race
+          </h1>
+            <app-character-sheet-input-box
+            [inputBoxWidth]="'440px'"
+            [inputBoxHeight]="'42px'"
+            [inputBoxType]="'text'"
+            [inputBoxTextAlign]="'start'"
+            [inputBoxId]="'bioInputRace'"
+            [inputBoxInputWidth]="'90%'"
+            [maxInputLength]="27"
+            >
+            </app-character-sheet-input-box>
+
+            <h1>
+              Origin
+            </h1>
+              <app-character-sheet-input-box
+              [inputBoxWidth]="'440px'"
+              [inputBoxHeight]="'42px'"
+              [inputBoxType]="'text'"
+              [inputBoxTextAlign]="'start'"
+              [inputBoxId]="'bioInputOrigin'"
+              [inputBoxInputWidth]="'90%'"
+              [maxInputLength]="27"
+              >
+              </app-character-sheet-input-box>
     </div>
 
   </div>
