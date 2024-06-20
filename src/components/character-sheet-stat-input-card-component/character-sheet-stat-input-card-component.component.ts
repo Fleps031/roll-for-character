@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CharacterSheetInputBoxComponent } from '../character-sheet-input-box/character-sheet-input-box.component';
+import { CharacterSheetStatsNamesEnum } from '../../enums/Character-Sheet-Stats.enum';
 
 
 @Component({
@@ -8,15 +9,22 @@ import { CharacterSheetInputBoxComponent } from '../character-sheet-input-box/ch
   styleUrls: ['./character-sheet-stat-input-card-component.component.scss'],
   standalone: true,
   imports: [
-    CharacterSheetInputBoxComponent
+    CharacterSheetInputBoxComponent,
   ]
 })
 export class CharacterSheetStatInputCardComponentComponent implements OnInit {
   @Input() statName!: string;
 
-  constructor() { }
+
+  curatedStatName: string
+  constructor() {
+  
+    this.curatedStatName = CharacterSheetStatsNamesEnum
+   
+  }
 
   ngOnInit() {
   }
+
 
 }

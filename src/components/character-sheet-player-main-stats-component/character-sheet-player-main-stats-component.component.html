@@ -1,10 +1,12 @@
 <div class = 'main-player-stats'>
   <div class = 'stats-grid'>
     <ng-container *ngFor="let stat of stats">
-      <app-character-sheet-stat-input-card-component
-        [statName]="stat"
-      >
-      </app-character-sheet-stat-input-card-component>
+      <div>
+        <app-character-sheet-stat-input-card-component
+          [statName]="stat"
+        >
+        </app-character-sheet-stat-input-card-component>
+      </div>
     </ng-container>
   </div>
 </div>

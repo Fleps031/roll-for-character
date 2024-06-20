@@ -21,6 +21,7 @@ export class CharacterSheetInputBoxComponent implements OnInit {
   @Input() inputBoxId!: string;
   @Input() maxInputLength!: number;
   @Input() inputBoxInputWidth!: string;
+  @Input() inputBoxPlaceholder!: string;
 
   validKeyValues!: string[];
   isInputTextSelected!: boolean;
@@ -34,6 +35,10 @@ export class CharacterSheetInputBoxComponent implements OnInit {
       'ArrowRight',
       'Tab',
     ];
+
+    if(this.inputBoxPlaceholder === undefined){
+      this.inputBoxPlaceholder = ''
+    }
 
 
   }

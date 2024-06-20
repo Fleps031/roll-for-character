@@ -14,6 +14,7 @@
     padding-left: 8px;
     padding-top: 4px;
     padding-bottom: 4px;
+    border-radius: 4px;
     background-color: rgba(3, 24, 25, 1);
 }
 
@@ -45,11 +46,11 @@
 .character-sheet-input-box{
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    padding-left: 12px;
     padding-top: 4px;
     padding-bottom: 4px;
+    border-radius: 4px;
     background-color: rgba(3, 24, 25, 1);
 }
 
