@@ -13,14 +13,10 @@ import { CharacterSheetStatsNamesEnum } from '../../enums/Character-Sheet-Stats.
   ]
 })
 export class CharacterSheetStatInputCardComponentComponent implements OnInit {
-  @Input() statName!: string;
+  @Input() statName!: CharacterSheetStatsNamesEnum;
 
 
-  curatedStatName: string
   constructor() {
-  
-    this.curatedStatName = CharacterSheetStatsNamesEnum
-   
   }
 
   ngOnInit() {

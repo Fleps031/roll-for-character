@@ -1,4 +1,8 @@
 export enum CharacterSheetStatsNamesEnum {
-    strength = 'Strength',
-    constitution = 'Constitution',
+  str = "Strength",
+  con = "Constitution",
+  dex = "Dexterity",
+  int = "Intelligence",
+  wis = "Wisdom",
+  char = "Charisma",
 }

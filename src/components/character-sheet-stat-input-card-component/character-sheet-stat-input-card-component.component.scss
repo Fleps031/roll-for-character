@@ -1,6 +1,6 @@
 .stat-card{
   width: 175px;
-  height: 211px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   grid-gap: 12px;
@@ -29,4 +29,13 @@
 .stat-card-stat-input{
   position: relative;
   top: 22%;
+
+  &:focus{
+    border: 100px solid red;
+  }
+}
+
+.stat-name{
+  font-weight: 600;
+  color: rgba(3, 24, 25, 1);
 }

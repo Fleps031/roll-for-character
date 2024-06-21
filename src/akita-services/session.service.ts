@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
-import { SheetServiceStore } from '../store/sheet-service.store';
 import { SessionStore } from './session.store';
 
 /**
- * SheetService service
+ * SessionService service
  *
  * @export
- * @class SheetServiceService
+ * @class SessionService
  */
 @Injectable({ providedIn: 'root' })
-export class SheetServiceService {
+export class SessionService {
 
   constructor(private sessionStore: SessionStore) {}
 
@@ -17,7 +16,9 @@ export class SheetServiceService {
     this.sessionStore.update({name: newName});
   }
 
-
+  updateToken( newToken: string): void{
+    this.sessionStore.update({token: newToken})
+  }
   destroyStore(): void {
     this.sessionStore.destroy();
   }

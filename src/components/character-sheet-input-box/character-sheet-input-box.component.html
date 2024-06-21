@@ -40,7 +40,7 @@
     (mousedown)="checkTextSelection()"
     (mouseup)="checkTextSelection()"
     (keydown)="enforceMinMax($event)"
-    
+    (blur)="onFocusOut()"
     >
   </div>
 </ng-container>

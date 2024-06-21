@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 
 import { NgIf } from '@angular/common';
+import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-character-sheet-input-box',
@@ -22,6 +23,8 @@ export class CharacterSheetInputBoxComponent implements OnInit {
   @Input() maxInputLength!: number;
   @Input() inputBoxInputWidth!: string;
   @Input() inputBoxPlaceholder!: string;
+
+
 
   validKeyValues!: string[];
   isInputTextSelected!: boolean;
@@ -73,6 +76,10 @@ export class CharacterSheetInputBoxComponent implements OnInit {
 
     this.isInputTextSelected = false;
 
+  }
+
+  onFocusOut(): void{
+    console.log('focus Out!!')
   }
 
 }

@@ -4,9 +4,10 @@
 
 .stats-grid{
   width: 600px;
+  height: fit-content;
   display: grid;
   grid-column-gap: 24px;
-  grid-row-gap: 24px;
+  grid-row-gap: 48px;
   grid-template-columns: auto auto auto;
 }
 
