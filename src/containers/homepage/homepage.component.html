@@ -1,6 +1,11 @@
 <div class='page-div'>
     <div class='main-container-div'>
         <app-header-container></app-header-container>
-        <app-character-sheet-container></app-character-sheet-container>
+        <app-character-sheet-container
+            [dndClasses]="dndClasses$ | async"
+        >
+
+        </app-character-sheet-container>
     </div>
+
 </div>
