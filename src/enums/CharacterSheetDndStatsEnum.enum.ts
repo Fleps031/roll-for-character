@@ -1,4 +1,4 @@
-export enum CharacterSheetStatsNamesEnum {
+export enum CharacterSheetStatsDisplayEnum {
   str = "Strength",
   con = "Constitution",
   dex = "Dexterity",

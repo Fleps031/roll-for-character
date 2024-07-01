@@ -12,6 +12,8 @@
         [inputBoxId]="'statInput-'+ statName"
         [inputBoxInputWidth]="'90%'"
         [maxInputLength]="2"
+
+        (focusOut)="updateStatValue($event)"
       >
       </app-character-sheet-input-box>
     </div>

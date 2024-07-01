@@ -21,42 +21,23 @@ import { CommonModule } from '@angular/common';
 })
 export class HomepageComponent implements OnInit, OnDestroy{
   
-  apiEndpoints$: Observable<object>
   dndClasses$: Observable<any>
-  apiEndpointList: object
   
   constructor(
     private sessionService: SessionService,
     private characterSheetService: CharacterSheetService,
     private characterSheetQuery: CharacterSheetQuery
   ){
-    this.apiEndpoints$ = this.characterSheetQuery.selectApiEndpoints$
     this.dndClasses$ = this.characterSheetQuery.selectDndClasses$
-    this.apiEndpointList = {}
   }
 
   ngOnInit(): void{
     this.updateSession();
-    this.characterSheetService.getDndApiEndpoints();
-    this.characterSheetService.getDndApiInfo('classes', 'barbarian');
-    
-    this.getApiEndpoints();
-
-   
   }
 
   updateSession(): void{
     this.sessionService.updateUserName('SessionName')
     this.sessionService.updateToken('SessionName');
-  }
-
-  getApiEndpoints(): void{
-    this.apiEndpoints$
-    .pipe(take(2))
-    .subscribe(resp => {
-      console.log(resp)
-      this.apiEndpointList = resp;
-    })
   }
 
   ngOnDestroy(): void {

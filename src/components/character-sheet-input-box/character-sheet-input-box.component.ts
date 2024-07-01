@@ -1,7 +1,6 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { NgIf } from '@angular/common';
-import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-character-sheet-input-box',
@@ -24,6 +23,8 @@ export class CharacterSheetInputBoxComponent implements OnInit {
   @Input() inputBoxInputWidth!: string;
   @Input() inputBoxPlaceholder!: string;
 
+  @Output() focusOut: EventEmitter<string>
+
 
 
   validKeyValues!: string[];
@@ -42,6 +43,8 @@ export class CharacterSheetInputBoxComponent implements OnInit {
     if(this.inputBoxPlaceholder === undefined){
       this.inputBoxPlaceholder = ''
     }
+
+    this.focusOut = new EventEmitter<string>()
 
 
   }
@@ -79,7 +82,11 @@ export class CharacterSheetInputBoxComponent implements OnInit {
   }
 
   onFocusOut(): void{
-    console.log('focus Out!!')
+    const currentInput = (document.querySelector('#'+ this.inputBoxId) as HTMLInputElement)
+    const currentInputValue = currentInput?.value
+    if(currentInputValue != undefined || currentInputValue != ''){
+      this.focusOut.emit(currentInputValue)
+    }
   }
 
 }

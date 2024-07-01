@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CharacterSheetInputBoxComponent } from '../character-sheet-input-box/character-sheet-input-box.component';
-import { CharacterSheetStatsNamesEnum } from '../../enums/Character-Sheet-Stats.enum';
-
+import { CharacterSheetStatsDisplayEnum } from '../../enums/CharacterSheetDndStatsEnum.enum';
+import { CharacterSheetService } from '../../akita-services/character-sheet/character-sheet.service';
 
 @Component({
   selector: 'app-character-sheet-stat-input-card-component',
@@ -13,13 +13,19 @@ import { CharacterSheetStatsNamesEnum } from '../../enums/Character-Sheet-Stats.
   ]
 })
 export class CharacterSheetStatInputCardComponentComponent implements OnInit {
-  @Input() statName!: CharacterSheetStatsNamesEnum;
+  @Input() statName!: CharacterSheetStatsDisplayEnum;
 
 
-  constructor() {
+  constructor(
+    private characterSheetService: CharacterSheetService
+  ) {
   }
 
   ngOnInit() {
+  }
+
+  updateStatValue(value: string){
+    this.characterSheetService.updateStatValue()
   }
 
 

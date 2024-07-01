@@ -3,6 +3,7 @@ import { CharacterSheetTitleBoxComponentComponent } from '../../components/chara
 import { CharacterSheetPlayerBioComponentComponent } from '../../components/character-sheet-player-bio-component/character-sheet-player-bio-component.component';
 import { CharacterSheetPlayerMainStatsComponentComponent } from '../../components/character-sheet-player-main-stats-component/character-sheet-player-main-stats-component.component';
 import { CommonModule } from '@angular/common';
+import { CharacterSheetDndClass } from '../../Interfaces/CharacterSheetDndClass.model';
 
 @Component({
   selector: 'app-character-sheet-container',
@@ -17,11 +18,11 @@ import { CommonModule } from '@angular/common';
   ]
 })
 export class CharacterSheetContainerComponent implements OnInit {
-  @Input() dndClasses?: any
-  constructor() { }
+  @Input() dndClasses?: CharacterSheetDndClass[]
+  constructor() {}
 
   ngOnInit() {
-    console.log('AAAA: ' + this.dndClasses)
+    console.log('init')
   }
 
 }

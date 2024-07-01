@@ -6,14 +6,14 @@ import { Injectable } from '@angular/core';
 @Injectable({ providedIn: 'root' })
 
 export class CharacterSheetQuery extends Query<CharacterSheetState>{
-    readonly selectApiEndpoints$: Observable<any>
+    readonly selectDndAbilityScores$: Observable<any>
     readonly selectDndClasses$: Observable<any>
-    
+
     constructor(protected override store: CharacterSheetStore){
         super(store)
 
-        this.selectApiEndpoints$ = this.select('apiEndpoints');
-        this.selectDndClasses$ = this.select('classes');
+        this.selectDndAbilityScores$ = this.select('abilityScores');
+        this.selectDndAbilityScores$ = this.select('dndClasses')
     }
 
 

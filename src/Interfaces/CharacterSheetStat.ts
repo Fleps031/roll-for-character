@@ -1,4 +1,4 @@
-import { CharacterSheetStatsNamesEnum } from "../enums/Character-Sheet-Stats.enum";
+import { CharacterSheetStatsDisplayEnum } from "../enums/CharacterSheetDndStatsEnum.enum";
 
 export interface CharacterSheetStat{
   stat: {
