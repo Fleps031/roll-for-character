@@ -82,9 +82,10 @@ export class CharacterSheetInputBoxComponent implements OnInit {
   }
 
   onFocusOut(): void{
+    console.log('focus out')
     const currentInput = (document.querySelector('#'+ this.inputBoxId) as HTMLInputElement)
     const currentInputValue = currentInput?.value
-    if(currentInputValue != undefined || currentInputValue != ''){
+    if(currentInputValue != undefined){
       this.focusOut.emit(currentInputValue)
     }
   }

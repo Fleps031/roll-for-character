@@ -14,11 +14,11 @@
 }
 
 #character-sheet-bio-separator{
-  height: 760px;
+  height: 920px;
   width: 4px;
   margin-top: 12px;
   border-radius: 8px;
-  background-color: rgba(3, 24, 26, 1);
+  background-color: rgb(  70, 99, 101);
 
 }
 

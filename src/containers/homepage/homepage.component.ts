@@ -33,6 +33,7 @@ export class HomepageComponent implements OnInit, OnDestroy{
 
   ngOnInit(): void{
     this.updateSession();
+    this.characterSheetService.setDefaultAbilityScores();
   }
 
   updateSession(): void{

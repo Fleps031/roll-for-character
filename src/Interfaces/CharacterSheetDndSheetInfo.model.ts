@@ -1,5 +1,5 @@
 import { CharacterSheetDndClassEnum } from "../enums/CharacterSheetDndClassEnum.enum";
-import { CharacterSheetStatsDisplayEnum } from '../enums/CharacterSheetDndStatsEnum.enum'
+import { CharacterSheetStatsDisplayEnum, CharacterSheetStatsEnum } from '../enums/CharacterSheetDndStatsEnum.enum'
 import { CharacterSheetDndRaceEnum } from "../enums/CharacterSheetDndRaceEnum.enum";
 
 export interface CharacterSheetDndBioInfo{
@@ -9,8 +9,22 @@ export interface CharacterSheetDndBioInfo{
     charRace?: CharacterSheetDndRaceEnum,
 }
 
+// export interface CharacterSheetDndAbilityScore{
+//     abilityScore: CharacterSheetStatsEnum,
+//     abilityScoreName: CharacterSheetStatsDisplayEnum,
+//     abilityScoreValue: number,
+//     abilityScoreBonus: number
+// }
+
 export interface CharacterSheetDndAbilityScore{
-    abilityScoreName: CharacterSheetStatsDisplayEnum,
     abilityScoreValue: number,
-    abilityScoreBonus: number
+    abilityScoreBonus: number,
+}
+export interface CharacterSheetDndAbilityScoreList{
+    str: CharacterSheetDndAbilityScore,
+    con: CharacterSheetDndAbilityScore,
+    dex: CharacterSheetDndAbilityScore,
+    int: CharacterSheetDndAbilityScore,
+    wis: CharacterSheetDndAbilityScore,
+    char: CharacterSheetDndAbilityScore,
 }

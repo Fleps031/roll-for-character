@@ -1,24 +1,27 @@
 <div class = 'stat-card'>
   <div class = 'stat-card-outliner'>
     <div class = 'stat-card-bonus'>
-      <p>+12</p>
+      <div class = 'hex-top'></div>
+      <div class = 'hex-mid'>
+        <h1 class = 'abilityScoreBonus'>{{formatedAbilityScoreBonus}}</h1>
+      </div>
+      <div class = 'hex-bottom'></div>
+      
     </div>
     <div class = 'stat-card-stat-input'>
       <app-character-sheet-input-box
         [inputBoxWidth]="'141px'"
-        [inputBoxHeight]="'71px'"
+        [inputBoxHeight]="'48px'"
         [inputBoxType]="'number'"
         [inputBoxTextAlign]="'center'"
-        [inputBoxId]="'statInput-'+ statName"
+        [inputBoxId]="'statInput-'+ stat"
         [inputBoxInputWidth]="'90%'"
         [maxInputLength]="2"
-
-        (focusOut)="updateStatValue($event)"
+        (focusOut)="updateAbilityScore($event)"
       >
       </app-character-sheet-input-box>
     </div>
   </div>
 
-  <h1 class = 'stat-name'> {{ statName }}</h1>
-
+  <h1 class = 'stat-name'>{{ statDisplayName }}</h1>
 </div>

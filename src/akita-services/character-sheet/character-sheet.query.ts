@@ -13,7 +13,7 @@ export class CharacterSheetQuery extends Query<CharacterSheetState>{
         super(store)
 
         this.selectDndAbilityScores$ = this.select('abilityScores');
-        this.selectDndAbilityScores$ = this.select('dndClasses')
+        this.selectDndClasses$ = this.select('dndClasses')
     }
 
 

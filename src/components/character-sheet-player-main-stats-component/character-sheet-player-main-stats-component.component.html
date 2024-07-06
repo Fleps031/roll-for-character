@@ -3,10 +3,22 @@
     <ng-container *ngFor="let stat of stats">
       <div>
         <app-character-sheet-stat-input-card-component
-          [statName]="stat"
+          [stat]="stat"
+          [abilityScore]="getDndAbilityScore(stat)"
         >
         </app-character-sheet-stat-input-card-component>
       </div>
     </ng-container>
+  </div>
+
+  <div class = 'bonus-stats-grid'>
+    <div class = 'teste-bonus'>
+      <div class = 'teste-bonus-item'></div>
+      <div class = 'teste-bonus-item'></div>
+      <div class = 'teste-bonus-item'></div>
+      <div class = 'teste-bonus-item'></div>
+      <div class = 'teste-bonus-item'></div>
+      <div class = 'teste-bonus-item'></div>
+    </div>
   </div>
 </div>
